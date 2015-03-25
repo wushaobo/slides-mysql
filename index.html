@@ -1,0 +1,343 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title></title>
+    
+    <meta name="author" content="Shaobo WU" />
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    <p>iPhone is not supported, but you should try iPad.</p>
+</div>
+
+<div id="impress">
+
+    <!--
+        
+        Here is where interesting thing start to happen.
+        
+        Each step of the presentation should be an element inside the `#impress` with a class name
+        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
+        the 'camera' shows them on each step of the presentation.
+        
+        Positioning information is passed through data attributes.
+        
+        In the example below we only specify x and y position of the step element with `data-x="-1000"`
+        and `data-y="-1500"` attributes. This means that **the center** of the element (yes, the center)
+        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
+        
+        It will not be rotated or scaled.
+        
+    -->
+    <div id="mysql" class="step" data-x="-1000" data-y="-1500" data-scale="7">
+        <q><strong>MySQL</strong></q>
+    </div>
+
+    <div id="overview" class="step" data-x="-1000" data-y="-1500" data-scale="20">
+    </div>
+
+    <div id="replication" class="step" data-x="6000" data-y="-6000" data-scale="5">
+        <q>Replication</q>
+    </div>
+
+    <div id="-master-slave" class="step" data-x="8000" data-y="-9500" data-scale="3"
+         data-rotate="-30">
+        <q>Master / Slave</q>
+    </div>
+
+    <div id="-master-slave-ref" class="step" data-x="20000" data-y="-10000" data-scale="1"
+         data-rotate="-15">
+        <img src="img/master-slave.jpg" width="1000">
+    </div>
+
+    <div id="-binlog-relaylog" class="step" data-x="11000" data-y="-9000" data-scale="3"
+         data-rotate="-5">
+        <q>Binary log / Relay log</q>
+    </div>
+
+    <div id="-binlog-relaylog-ref" class="step" data-x="20000" data-y="-8000" data-scale="1"
+         data-rotate="-5">
+        <img src="img/binlog-relaylog.jpg" width="1000">
+    </div>
+
+    <div id="-async" class="step" data-x="11500" data-y="-7500" data-scale="3"
+         data-rotate="5">
+        <q>Asynchronous</q>
+        <div class="sub-title">tool: XtraBackup</div>
+    </div>
+
+    <div id="-sync" class="step" data-x="11000" data-y="-6000" data-scale="3"
+         data-rotate="15">
+        <q>Synchronous</q>
+    </div>
+
+    <div id="overview-replication" class="step" data-x="6000" data-y="-6000" data-scale="10">
+    </div>
+
+    <div id="backup" class="step" data-x="9000" data-y="-1500" data-scale="5">
+        <q>Backup</q>
+    </div>
+
+    <div id="-fully-backup" class="step" data-x="14000" data-y="-4500" data-scale="3"
+         data-rotate="-30">
+        <q>Fully backup</q>
+        <div class="sub-title">Snapshot</div>
+    </div>
+
+    <div id="-incremental-backup" class="step" data-x="14000" data-y="-2000" data-scale="3"
+         data-rotate="0">
+        <q>Incremental backup</q>
+        <div class="sub-title">Replication slaves</div>
+    </div>
+
+    <div id="-backup-references" class="step" data-x="14000" data-y="500" data-scale="3"
+         data-rotate="30">
+        <q>Reference</q>
+        <div class="sub-title">
+            <a href="http://dev.mysql.com/doc/refman/5.7/en/backup-methods.html">backup-methods</a>
+        </div>
+    </div>
+
+    <div id="overview-backup" class="step" data-x="9000" data-y="-1500" data-scale="10">
+    </div>
+
+    <div id="multi-master" class="step" data-x="6000" data-y="3000" data-scale="5">
+        <q>Multi-master</q>
+    </div>
+
+    <div id="-multi-master-why" class="step" data-x="11000" data-y="2000" data-scale="3"
+         data-rotate="-15">
+        <q>Why we need it</q>
+        <ul class="right">
+            <li><a href="http://dev.mysql.com/doc/refman/5.6/en/mysql-cluster-replication-multi-master.html">remote site</a></li>
+            <li>load balance</li>
+            <li>fast switch</li>
+        </ul>
+    </div>
+
+    <div id="-multi-master-limits" class="step" data-x="11000" data-y="4000" data-scale="3"
+         data-rotate="15">
+        <q>Problems</q>
+        <ul class="right">
+            <li>data inconsistency</li>
+            <li>key collision</li>
+            <li>easy conflicts</li>
+            <li>lock</li>
+        </ul>
+    </div>
+
+    <div id="-multi-master-references" class="step" data-x="11000" data-y="6000" data-scale="3"
+         data-rotate="30">
+        <q>Reference</q>
+        <div class="sub-title">
+            <a href="http://scale-out-blog.blogspot.com/2012/04/if-you-must-deploy-multi-master.html">
+                If You *Must* Deploy Multi-Master Replication, Read This First
+            </a>
+        </div>
+    </div>
+
+    <div id="overview-multi-master" class="step" data-x="6000" data-y="3000" data-scale="10">
+    </div>
+
+    <div id="cluster" class="step" data-x="-5500" data-y="-6500" data-scale="5">
+        <q>Cluster</q>
+    </div>
+
+    <div id="-cap" class="step" data-x="-10000" data-y="-9500" data-scale="3"
+         data-rotate="40">
+        <q class="right">CAP</q>
+        <ul class="left">
+            <li>Consistency *</li>
+            <li>Availability *</li>
+            <li>Partitioning</li>
+        </ul>
+    </div>
+
+    <div id="-health-check" class="step" data-x="-10000" data-y="-8000" data-scale="3"
+         data-rotate="10">
+        <q class="right">Health Check</q>
+        <ul class="left">
+            <li>majority agreement</li>
+            <li>tool: clustercheck</li>
+        </ul>
+    </div>
+
+    <div id="-bootstrap" class="step" data-x="-10000" data-y="-6500" data-scale="3"
+         data-rotate="-5">
+        <q class="right">Bootstrap</q>
+        <ul class="left">
+            <li>Init node</li>
+            <li>SST</li>
+        </ul>
+    </div>
+
+    <div id="-bootstrap-ref" class="step" data-x="-20000" data-y="-6500" data-scale="1"
+         data-rotate="-5">
+        <q class="right">Reference</q>
+        <ul class="left">
+            <li><a href="http://www.slideshare.net/Grypyrg/pxc-introduction-34774802">xtradb cluster introduction</a></li>
+            <li><a href="https://github.com/jayjanssen/percona-xtradb-cluster-tutorial">play xtradb cluster with vagrant</a></li>
+        </ul>
+    </div>
+
+    <div id="-lb" class="step" data-x="-10000" data-y="-5500" data-scale="3"
+         data-rotate="-20">
+        <q class="right">Load Balancer</q>
+        <ul class="left">
+            <li>balance writes with consistency</li>
+            <li>health check and failover</li>
+            <li>read-write splitting</li>
+        </ul>
+    </div>
+
+    <div id="-lb-ref" class="step" data-x="-20000" data-y="-5500" data-scale="1"
+         data-rotate="-20">
+        <q>Reference</q>
+
+        <ul>
+            <li>
+                <a href="http://www.severalnines.com/blog/benchmark-load-balancers-mysqlmariadb-galera-cluster">
+                    Benchmark of Load Balancers for MySQL/MariaDB Galera Cluster
+                </a>
+            </li>
+            <li>
+                <a href="http://www.slideshare.net/Severalnines/galera-cluster-for-mysql-vs-mysql-ndb-cluster-a-high-level-comparison-42724783?related=1">
+                    Galera Cluster for MySQL vs MySQL (NDB) Cluster: A High Level Comparison
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="overview-cluster" class="step" data-x="-5500" data-y="-6500" data-scale="7">
+    </div>
+
+    <div id="partitioning" class="step" data-x="-9000" data-y="-2500" data-scale="5">
+        <q>Partitioning</q>
+    </div>
+
+    <div id="-why-partitioning" class="step" data-x="-12500" data-y="-3000" data-scale="3"
+         data-rotate="20">
+        <q>Why partitioning</q>
+        <ul>
+            <li>reduce cost of large amount data</li>
+            <li>performance</li>
+            <li>management</li>
+        </ul>
+        <div class="sub-title">
+            <a href="http://docs.oracle.com/cd/B28359_01/server.111/b32024/partition.htm">Reference</a>
+        </div>
+    </div>
+
+    <div id="-sharding" class="step" data-x="-12500" data-y="-1500" data-scale="3"
+         data-rotate="-10">
+        <q>Sharding</q>
+        <div class="sub-title">
+            <a href="http://www.quora.com/Whats-the-difference-between-sharding-and-partition">
+                Horizontal partitioning
+            </a>
+        </div>
+    </div>
+
+    <div id="overview-partitioning" class="step" data-x="-9000" data-y="-2500" data-scale="7">
+    </div>
+
+    <div id="performance" class="step" data-x="-9000" data-y="1500" data-z="-100" data-rotate-x="-30" data-rotate-y="10" data-scale="5">
+        <q>Performance</q>
+    </div>
+
+    <div id="misc" class="step" data-x="-3000" data-y="4000" data-z="-100" data-rotate-x="-30" data-rotate-y="10" data-scale="5">
+        <q>misc</q>
+    </div>
+
+</div>
+
+<!--
+    
+    Hint is not related to impress.js in any way.
+    
+    But it can show you how to use impress.js features in creative way.
+    
+    When the presentation step is shown (selected) its element gets the class of "active" and the body element
+    gets the class based on active step id `impress-on-ID` (where ID is the step's id)... It may not be
+    so clear because of all these "ids" in previous sentence, so for example when the first step (the one with
+    the id of `bored`) is active, body element gets a class of `impress-on-bored`.
+    
+    This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation when
+    the first step of presentation is visible for a couple of seconds.
+    
+    ...
+    
+    And when it comes to this piece of JavaScript below ... kids, don't do this at home ;)
+    It's just a quick and dirty workaround to get different hint text for touch devices.
+    In a real world it should be at least placed in separate JS file ... and the touch content should be
+    probably just hidden somewhere in HTML - not hard-coded in the script.
+    
+    Just sayin' ;)
+    
+-->
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<!--
+    
+    Last, but not least.
+    
+    To make all described above really work, you need to include impress.js in the page.
+    I strongly encourage to minify it first.
+    
+    In here I just include full source of the script to make it more readable.
+    
+    You also need to call a `impress().init()` function to initialize impress.js presentation.
+    And you should do it in the end of your document. Not only because it's a good practice, but also
+    because it should be done when the whole document is ready.
+    Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
+    
+-->
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+<!--
+    
+    The `impress()` function also gives you access to the API that controls the presentation.
+    
+    Just store the result of the call:
+    
+        var api = impress();
+    
+    and you will get three functions you can call:
+    
+        `api.init()` - initializes the presentation,
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation,
+        `api.goto( idx | id | element, [duration] )` - moves the presentation to the step given by its index number
+                id or the DOM element; second parameter can be used to define duration of the transition in ms,
+                but it's optional - if not provided default transition duration for the presentation will be used.
+    
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+    
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+    
+-->
+
+</body>
+</html>
